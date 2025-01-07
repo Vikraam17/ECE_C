@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      img{
+        display: flex;
+        height: 100px;
+      }
+      .container{
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+      .one{
+        border: 1px solid black;
+        padding: 20px;
+        background-color: red;
+        height: 100px;
+        width: 800px;
+      }
+      .two{
+        border: 1px solid black;
+        padding: 20px;
+        background-color: white;
+        height: 100px;
+        width: 800px;
+        display: flex;
+        justify-content: center;
+      }
+      .three{
+        border: 1px solid black;
+        padding: 20px;
+        height: 100px;
+        width: 800px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body style="background-color: chocolate;">
+    <div class="container">
+      <div class="one"></div>
+      <div class="two">
+        <img src="image.png" alt="">
+      </div>
+      <div class="three"></div>
+    </div>
+  </body>
+</html>
