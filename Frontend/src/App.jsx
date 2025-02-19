@@ -1,18 +1,24 @@
-import { useState } from "react";
+import React from 'react'
+import Navbar from './components/Navbar/Navbar'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Home from './components/Pages/Home'
+import About from './components/Pages/About'
+import COntact from './components/Pages/COntact'
 
-function App() {
-  const [count, setCount] = useState(0);
-
-  const [name,setName] = useState("Vikraam");
+const App = () => {
   return (
-    <>
-      <h1>{count}</h1>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
-      <button onClick={() => setCount(count + 1)}>Increament</button>
-      <h1>{name}</h1>
-      <button onClick={()=>setName(name==="vikraam"?"viky":"vikraam")}> CLick me to see my NickName</button>
-    </>
-  );
+    <div>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}></Route>
+          <Route path='/About' element={<About/>}/>
+          <Route path="/contact" element={<COntact/>}/>
+        </Routes>
+      </BrowserRouter>
+      
+    </div>
+  )
 }
 
-export default App;
+export default App
